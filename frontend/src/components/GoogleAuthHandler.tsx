@@ -14,6 +14,14 @@ const GoogleAuthHandler: React.FC = () => {
 
     if (loginStatus === 'success') {
       try {
+        // Detect cookies disabled
+        try {
+          if (typeof navigator !== 'undefined' && navigator.cookieEnabled === false) {
+            toast.error('Cookies are disabled in your browser. Please enable cookies to complete sign-in.');
+            navigate('/login', { replace: true });
+            return;
+          }
+        } catch {}
         // The token is now in an httpOnly cookie, so we need to verify the user is authenticated
         // by making a request to the backend to get user info
         const apiUrl = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? '' : 'https://backend-91cb.onrender.com');

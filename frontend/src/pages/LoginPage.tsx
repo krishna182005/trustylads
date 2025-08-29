@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Eye, EyeOff, Mail, Lock, User } from 'lucide-react';
@@ -22,6 +22,15 @@ const LoginPage: React.FC = () => {
   const { login } = useAuthStore();
 
   const from = location.state?.from?.pathname || '/';
+
+  // Warn if cookies are disabled (sign-in requires cookies)
+  useEffect(() => {
+    try {
+      if (typeof navigator !== 'undefined' && navigator.cookieEnabled === false) {
+        toast.error('Cookies are disabled in your browser. Please enable cookies to sign in.');
+      }
+    } catch {}
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

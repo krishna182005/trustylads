@@ -1,3 +1,53 @@
+{
+  "rewrites": [
+    {"source": "/auth/google/callback",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "https://backend-91cb.onrender.com/api/$1"
+    },
+    {
+      "source": "/auth/(.*)",
+      "destination": "https://backend-91cb.onrender.com/auth/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; connect-src 'self' https://api.trustylads.tech https://backend-91cb.onrender.com https://www.google-analytics.com https://www.googletagmanager.com https://accounts.google.com; img-src 'self' data: blob: https://images.pexels.com https://cdn.pixabay.com https://ui-avatars.com https://www.google-analytics.com https://www.googletagmanager.com https://razorpay.com https://github.com; script-src 'self' 'unsafe-inline' https://checkout.razorpay.com https://www.googletagmanager.com https://www.google-analytics.com https://accounts.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-src https://api.razorpay.com https://checkout.razorpay.com https://accounts.google.com;"
+        }
+      ]
+    }
+  ]
+}
 <!doctype html>
 <html lang="en">
   <head>
@@ -26,11 +76,11 @@
     <meta name="theme-color" content="#FBBF24" />
     <meta name="msapplication-TileColor" content="#FBBF24" />
     
-    <!-- Preconnect to external domains -->
+    <!-- Preconnect to critical external domains -->
+    <link rel="preconnect" href="https://api.trustylads.tech" />
+    <link rel="preconnect" href="https://checkout.razorpay.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://images.pexels.com" />
-    <link rel="preconnect" href="https://checkout.razorpay.com" />
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />

@@ -138,7 +138,6 @@ const ReviewList: React.FC<ReviewListProps> = ({ productId, className = '' }) =>
       ) : (
         <div className="space-y-4">
           {reviews.map((review) => {
-            // FIX: Replace the broken placeholder URL with a working one.
             const userPictureUrl = review.userPicture?.includes('via.placeholder.com')
               ? `https://placehold.co/40x40/3B82F6/FFFFFF?text=${review.userName.charAt(0)}`
               : review.userPicture;
@@ -168,35 +167,18 @@ const ReviewList: React.FC<ReviewListProps> = ({ productId, className = '' }) =>
                         }}
                       />
                     ) : null}
-                    <div className="flex items-center space-x-3">
-                      {userPictureUrl ? (
-                        <img 
-                          src={userPictureUrl} 
-                          alt={review.userName}
-                          className="w-8 h-8 rounded-full object-cover"
-                          width="32"
-                          height="32"
-                          onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.style.display = 'none';
-                            const nextEl = target.nextElementSibling;
-                            if (nextEl) nextEl.classList.remove('hidden');
-                          }}
-                        />
-                      ) : null}
-                      <div className={`w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center ${userPictureUrl ? 'hidden' : ''}`}>
-                        <User className="h-4 w-4 text-black" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-sm text-gray-800">{review.userName}</p>
-                        <div className="flex items-center text-xs text-gray-500">
-                          <Calendar className="h-3 w-3 mr-1" />
-                          {formatDate(review.createdAt)}
-                        </div>
+                    <div className={`w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center ${userPictureUrl ? 'hidden' : ''}`}>
+                      <User className="h-4 w-4 text-black" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-sm text-gray-800">{review.userName}</p>
+                      <div className="flex items-center text-xs text-gray-500">
+                        <Calendar className="h-3 w-3 mr-1" />
+                        {formatDate(review.createdAt)}
                       </div>
                     </div>
-                    <div className="flex items-center">{renderStars(review.rating)}</div>
                   </div>
+                  <div className="flex items-center">{renderStars(review.rating)}</div>
                 </div>
                 <p className="text-sm text-gray-700">{review.comment}</p>
               </motion.div>

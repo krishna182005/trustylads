@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://trustylads.tech/sitemap.xml
-
-

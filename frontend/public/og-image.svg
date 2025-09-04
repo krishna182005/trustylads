@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="TrustyLads Open Graph image">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#000000" />
-      <stop offset="100%" stop-color="#111827" />
-    </linearGradient>
-  </defs>
-  <rect width="1200" height="630" fill="url(#g)"/>
-  <text x="80" y="240" font-family="Inter, Arial, sans-serif" font-size="88" font-weight="800" fill="#FBBF24">TrustyLads</text>
-  <text x="80" y="330" font-family="Inter, Arial, sans-serif" font-size="40" fill="#E5E7EB">Simple, affordable, reliable shopping</text>
-  <rect x="80" y="370" width="360" height="6" fill="#FBBF24"/>
-</svg>
-
-
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" aria-label="TrustyLads Open Graph image" role="img" viewBox="0 0 1200 630"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#000"/><stop offset="100%" stop-color="#111827"/></linearGradient></defs><rect width="1200" height="630" fill="url(#g)"/><text x="80" y="240" fill="#FBBF24" font-family="Inter, Arial, sans-serif" font-size="88" font-weight="800">TrustyLads</text><text x="80" y="330" fill="#E5E7EB" font-family="Inter, Arial, sans-serif" font-size="40">Simple, affordable, reliable shopping</text><rect width="360" height="6" x="80" y="370" fill="#FBBF24"/></svg>

@@ -63,8 +63,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   
   const primaryImage = product.images.find(img => img.isPrimary) || product.images[0];
   const hasDiscount = product.originalPrice && product.originalPrice > product.price;
-  const discountPercentage = hasDiscount 
-    ? Math.round(((product.originalPrice! - product.price) / product.originalPrice!) * 100)
+  const discountPercentage = hasDiscount && product.originalPrice
+    ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
     : 0;
 
   const handleAddToCart = () => {
@@ -82,8 +82,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       size: availableSize.size,
       quantity: 1,
       image: primaryImage?.url || '',
-      category: product.category && typeof product.category === 'object' && (product.category as any).name 
-        ? (product.category as any).name 
+      category: product.category && typeof product.category === 'object' && 'name' in product.category
+        ? (product.category as { name: string }).name 
         : product.category || 'Uncategorized',
       maxStock: availableSize.stock
     });
@@ -104,7 +104,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             alt={product.name}
             width={300}
             height={160}
-            className="w-full h-32 sm:h-36 lg:h-40 group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-32 sm:h-36 lg:h-40 group-hover:scale-[1.02] transition-transform duration-300"
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
           />
           
@@ -177,15 +177,15 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center space-x-2">
               <span className="font-bold text-gray-900 text-sm">₹{product.price.toLocaleString()}</span>
-              {hasDiscount && (
+              {hasDiscount && product.originalPrice && (
                 <span className="text-xs text-gray-500 line-through">
-                  ₹{product.originalPrice!.toLocaleString()}
+                  ₹{product.originalPrice.toLocaleString()}
                 </span>
               )}
             </div>
             <span className="text-xs text-gray-500 capitalize">
-              {product.category && typeof product.category === 'object' && (product.category as any).name 
-                ? (product.category as any).name 
+              {product.category && typeof product.category === 'object' && 'name' in product.category
+                ? (product.category as { name: string }).name 
                 : product.category || 'Uncategorized'}
             </span>
           </div>

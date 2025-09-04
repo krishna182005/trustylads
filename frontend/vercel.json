@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://www.trustylads.tech/$1",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {"source": "/auth/google/callback", "destination": "/index.html"},
     {"source": "/api/(.*)", "destination": "https://backend-91cb.onrender.com/api/$1"},

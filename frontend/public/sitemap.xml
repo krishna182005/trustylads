@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.trustylads.tech/</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.trustylads.tech/og-image.svg</image:loc>
+      <image:title>TrustyLads - Premium Products Collection</image:title>
+    </image:image>
+  </url>
+
+  <!-- Shop Page -->
+  <url>
+    <loc>https://www.trustylads.tech/shop</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Track Order -->
+  <url>
+    <loc>https://www.trustylads.tech/track</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Login -->
+  <url>
+    <loc>https://www.trustylads.tech/login</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- My Orders -->
+  <url>
+    <loc>https://www.trustylads.tech/orders</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- About Us -->
+  <url>
+    <loc>https://www.trustylads.tech/about</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Us -->
+  <url>
+    <loc>https://www.trustylads.tech/contact</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://www.trustylads.tech/faq</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://www.trustylads.tech/privacy-policy</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://www.trustylads.tech/terms</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Refund Policy -->
+  <url>
+    <loc>https://www.trustylads.tech/refund-policy</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Shipping Policy -->
+  <url>
+    <loc>https://www.trustylads.tech/shipping</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Size Guide -->
+  <url>
+    <loc>https://www.trustylads.tech/size-guide</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Returns & Refunds -->
+  <url>
+    <loc>https://www.trustylads.tech/returns</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

@@ -48,8 +48,8 @@ const EmailVerificationModal: React.FC<EmailVerificationModalProps> = ({
       setCanResend(false);
       setOtp('');
       // Display OTP in development mode if available
-      if (result.otp) {
-        setDisplayOTP(result.otp);
+      if ((result as any).otp) {
+        setDisplayOTP((result as any).otp);
       }
     }
   };

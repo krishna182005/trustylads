@@ -264,7 +264,7 @@ const HomePage: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://www.trustylads.tech/site-banner-2.jpg)'
+            backgroundImage: 'url(https://https://www.trustylads.tech/banner@t.png)'
           }}
         ></div>
         

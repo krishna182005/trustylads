@@ -136,7 +136,7 @@ export const initiateRazorpayPayment = async (
     }
 
     // Detect mock mode: when backend didn't create a real Razorpay order
-    const isMockOrder = !!(order?.id && String(order.id).startsWith('order_mock_'));
+    // const isMockOrder = !!(order?.id && String(order.id).startsWith('order_mock_'));
 
     const options: RazorpayOptions = {
       // Use key from backend response or fallback to env variable
@@ -187,9 +187,9 @@ export const initiateRazorpayPayment = async (
     console.log('🚀 Opening Razorpay checkout...');
     // Open Razorpay checkout
     razorpay.open();
-  } catch (error) {
+  } catch (error: any) {
     console.error('❌ Razorpay initialization error:', error);
-    console.error('❌ Error stack:', error.stack);
+    console.error('❌ Error stack:', error?.stack);
     console.error('❌ Window.Razorpay available:', !!window.Razorpay);
     console.error('❌ Response data:', responseData);
     
@@ -199,8 +199,8 @@ export const initiateRazorpayPayment = async (
       source: 'client',
       step: 'payment_initialization',
       reason: 'sdk_error',
-      details: error.message,
-      stack: error.stack
+      details: error?.message || 'Unknown error',
+      stack: error?.stack
     });
   }
 };
